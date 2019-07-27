@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t umermunirrr/test-node-app .'
+        sh 'docker build -t muhammadumair09/test-node-app .'
       }
     }
     stage('Test') {
@@ -20,7 +20,7 @@ pipeline {
         steps{
             script {
                 docker.withRegistry( '', registryCredential ) {
-                  sh 'docker push umermunirrr/test-node-app:latest'
+                  sh 'docker push muhammadumair09/test-node-app:latest'
                 }
             }
         }
